@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<title>Document</title>
+
+	</head>
+
+	<body>
+		
+		<div id="startShow">
+			<div>
+				<img class="pos_a" src="imgas/img/main2 (2).png">
+				<img class="pos_b" src="imgas/img/main2 (1).png">
+			</div>
+
+		</div>
+		<div id="time">
+			<span class="span0 time"></span>
+			<span class="span2 time"></span>
+			<span class="spanx"></span>
+			<span class="span1 time"></span>
+			<span class="span2 time"></span>
+			<span class="spanx"></span>
+			<span class="span5 time"></span>
+			<span class="span9 time"></span>
+		</div>
+		<main id="main">
+			<!--页面固定定位开始-->
+			<div id="fixed">
+				<div class="logo">
+					<img src="imgas/img/logo.png" alt="" class="logo1" />
+
+					<img src="imgas/img/17.png" alt="" class="mask" />
+				</div>
+				<div id="nav">
+					<img src="imgas/img/2(6).png" alt="" class="nav_log" />
+					<ul class="nav_l" id="ol">
+						<li class="active">
+							<p>首页</p>
+						</li>
+						<li>
+							<p>精于形</p>
+						</li>
+						<li>
+							<p>精于行</p>
+						</li>
+						<li>
+							<p>精于芯</p>
+						</li>
+						<li>
+							<p>精于心</p>
+						</li>
+					</ul>
+					<ul class="nav_r">
+						<li class="li6"></li>
+						<li class="li7"></li>
+						<li class="li8"></li>
+						<li class="li9"></li>
+					</ul>
+					<ul class="nav_do">
+						<li class="li10" id="li10"></li>
+						<li class="li11" id="li11"></li>
+						<li class="li12" id="li12"></li>
+					</ul>
+					<img src="imgas/img/5.png" alt="" class="img_b" />
+					<img src="imgas/img/23.png" alt="" class="img_b1" />
+				</div>
+			</div>
+			<div class="foot">
+				<img src="imgas/img/8.png" alt="" class="foot1" />
+			</div>
+			</div>
+
+			<!--页面固定定位结束-->
+			<!--预约试驾部分开始-->
+			<div id="yua" style="display: none;">
+				<div class="yu11">
+					<div style="margin-bottom: 10px;">
+						<div class="min">
+							<big>姓名<i>name</i></big>
+							<input type="text" id="input1" />
+						</div>
+						<div class="min">
+							<big>电话<i>phone</i></big>
+							<input type="text" id="input2" />
+						</div>
+					</div>
+					<div style="margin-bottom: 10px;">
+						<div class="min">
+							<big>省份<i>province</i></big>
+							<select name="" class="input3" id="province1" size=1 onchange="getCity()">
+								<option value=0>北京</option>
+								<option value=1>上海</option>
+								<option value=2>天津</option>
+								<option value=3>重庆</option>
+								<option value=4>河北</option>
+								<option value=5>山西</option>
+								<option value=6>内蒙古</option>
+								<option value=7>辽宁</option>
+								<option value=8>吉林</option>
+								<option value=9>黑龙江</option>
+								<option value=10>江苏</option>
+								<option value=11>浙江</option>
+								<option value=12>安徽</option>
+								<option value=13>福建</option>
+								<option value=14>江西</option>
+								<option value=15>山东</option>
+								<option value=16>河南</option>
+								<option value=17>湖北</option>
+								<option value=18>湖南</option>
+								<option value=19>广东</option>
+								<option value=20>广西</option>
+								<option value=21>海南</option>
+								<option value=22>四川</option>
+								<option value=23>贵州</option>
+								<option value=24>云南</option>
+								<option value=25>西藏</option>
+								<option value=26>陕西</option>
+								<option value=27>甘肃</option>
+								<option value=28>宁夏</option>
+								<option value=29>青海</option>
+								<option value=30>新疆</option>
+								<option value=31>香港</option>
+								<option value=32>澳门</option>
+								<option value=33>台湾</option>
+							</select>
+						</div>
+
+						<div class="min">
+							<big>城市<i>city</i></big>
+							<select name="" class="input4" id="city1"></select>
+						</div>
+					</div>
+					<div style="margin-bottom: 10px;">
+						<div class="min">
+							<big>意向购车时间<i>time</i></big>
+							<select name="" id="input5">
+								<option value="">暂时没有需求</option>
+								<option value="">3~6个月之间</option>
+								<option value="">一年之内</option>
+								<option value="">两年之内</option>
+							</select>
+						</div>
+					</div>
+					<div style="margin-bottom: 10px;">
+						<div class="min">
+							<input type="button" id="btnsbt" />
+
+						</div>
+					</div>
+				</div>
+				<img src="imgas/11.png" alt="" id="cuo1" />
+			</div>
+			<div id="yua1" style="display: none;">
+				<div class="yua22">
+					<div class="ddd">
+						<form action="">
+							<p>请选择你所在的区域</p>
+							<div>
+								<select name="" id="pre" size=1 onchange="chg(this);">
+									<option value="-1">请选择</option>
+								</select>
+								<select name="" id="city2" onchange="chgs(this)"></select>
+							</div>
+							<div id="chne">
+								<ul>
+									<li>
+										<div>
+											<h2>北京年隆汽车销售有限公司</h2>
+											<p>联系电话：4008103713</p>
+											<p>服务热线：0452-8888109</p>
+											<p>店面地址：齐齐哈尔市龙沙区南苑开发区喜庆路北国粮油综合市场楼（市1中南门对面）</p>
+
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div id="dituContent">
+
+							</div>
+						</form>
+					</div>
+				</div>
+				<img src="imgas/11.png" alt="" id="cuo2" />
+			</div>
+			<div id="yua2" style="display: none;">
+				<div class="table">
+					<img src="imgas/14.png" />
+					<table class="table1">
+						<tr>
+							<th>车型 </th>
+							<th>1.8T 豪华型</th>
+							<th>1.8T 尊贵型</th>
+							<th>1.8T 旗舰型</th>
+						</tr>
+					</table>
+					<div class="scroll">
+						<table class="table2">
+							<tr>
+								<td>市场建议价（元）</td>
+								<td>179,700</td>
+								<td>199,700</td>
+								<td>219,700</td>
+							</tr>
+							<tr>
+								<td colspan="4">主要参数</td>
+							</tr>
+							<tr>
+								<td>长×宽×高（mm）</td>
+								<td colspan="3">5066*1858*1470</td>
+							</tr>
+							<tr>
+								<td>轴距（mm）</td>
+								<td colspan="3">2900</td>
+							</tr>
+							<tr>
+								<td>前/后轮距(mm)</td>
+								<td colspan="3">1589/1563</td>
+							</tr>
+							<tr>
+								<td>最小离地间隙（mm）</td>
+								<td colspan="3">120(满载）</td>
+							</tr>
+							<tr>
+								<td>整备质量（kg）</td>
+								<td colspan="3">1660</td>
+							</tr>
+							<tr>
+								<td>油箱容积（L）</td>
+								<td colspan="3">70L</td>
+							</tr>
+							<tr>
+								<td>发动机</td>
+								<td colspan="3">Twin scroll双流道涡轮增压技术、高压缸内直喷技术、<br>CVVT连续可变进气正时技术、链传动、DOHC、16气门</td>
+							</tr>
+							<tr>
+								<td>排量（mL)</td>
+								<td colspan="3">1751</td>
+							</tr>
+							<tr>
+								<td>最大功率（Kw/rpm)</td>
+								<td colspan="3">150/5500</td>
+							</tr>
+							<tr>
+								<td>最大扭矩（N·m/rpm)</td>
+								<td colspan="3">280/1400-4000</td>
+							</tr>
+							<tr>
+								<td>变速箱</td>
+								<td colspan="3">6速手自一体Tiptronic变速箱（带QuickShift极速换挡技术）</td>
+							</tr>
+							<tr>
+								<td>驱动方式</td>
+								<td colspan="3">前置前驱</td>
+							</tr>
+							<tr>
+								<td>前悬挂类型</td>
+								<td colspan="3">麦弗逊式独立悬架（螺旋弹簧，液压筒式减震器，带三角型下横臂及横向稳定杆）</td>
+							</tr>
+							<tr>
+								<td>后悬挂类型</td>
+								<td colspan="3">多连杆式后独立悬架（螺旋弹簧，液压筒式减震器，带横向稳定杆）</td>
+							</tr>
+							<tr>
+								<td>制动类型</td>
+								<td colspan="3">前后盘刹</td>
+							</tr>
+							<tr>
+								<td>转向系统</td>
+								<td colspan="3">电液可变助力转向</td>
+							</tr>
+							<tr>
+								<td>轮胎规格</td>
+								<td colspan="3">18吋铝轮</td>
+							</tr>
+							<tr>
+								<td>0-100km/h加速</td>
+								<td colspan="3">8.5s （ODM）</td>
+							</tr>
+							<tr>
+								<td>最高车速(km/h)</td>
+								<td colspan="3">230</td>
+							</tr>
+							<tr>
+								<td>工信部综合油耗(L)</td>
+								<td colspan="3">6.6</td>
+							</tr>
+							<tr>
+								<td>排放标准</td>
+								<td colspan="3">国五</td>
+							</tr>
+							<tr>
+								<td colspan="4">大气造型</td>
+							</tr>
+							<tr>
+								<td>LED前大灯（带弯道辅助照明）</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>LED自动大灯（自动点亮+自动高度调节）</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>LED大灯远近光自动切换</td>
+								<td>-</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>LED日间行车灯/转向灯/制动灯/尾灯</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>LED前后雾灯（前雾灯带弯道辅助照明）</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>电动天窗（有微开功能、遥控可关闭）</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>四窗一触式防夹</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>遥控开启/关闭车窗</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>降噪浅色前风窗玻璃</td>
+								<td>●</td>
+								<td>-</td>
+								<td>-</td>
+							</tr>
+							<tr>
+								<td>降噪隔热浅色前风窗玻璃</td>
+								<td>-</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>前风挡雨刮</td>
+								<td>自动</td>
+								<td>自动</td>
+								<td>自动</td>
+							</tr>
+							<tr>
+								<td>自动防眩目内后视镜</td>
+								<td>-</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>后视镜电动调节/加热/折叠</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>倒车时后视镜自动调节（自动照地 ）</td>
+								<td>-</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>后风窗电动遮阳帘</td>
+								<td>-</td>
+								<td>-</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>后车窗遮阳帘</td>
+								<td>-</td>
+								<td>-</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>发动机罩气动撑杆</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>后备箱电动开启</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td colspan="4">乘坐空间</td>
+							</tr>
+							<tr>
+								<td>LED前顶灯</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>LED地图灯</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>LED迎宾灯</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>LED氛围灯</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>座椅皮质</td>
+								<td>Claudia真皮</td>
+								<td>Nappa真皮</td>
+								<td>Nappa真皮</td>
+							</tr>
+							<tr>
+								<td>前排电动座椅调节</td>
+								<td>六向</td>
+								<td>八向</td>
+								<td>八向</td>
+							</tr>
+							<tr>
+								<td>前排腰部调节/按摩</td>
+								<td>-</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>前排座椅加热通风</td>
+								<td>-</td>
+								<td>-</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>前排钱夹式舒适头枕</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>驾驶席座椅记忆功能</td>
+								<td>-</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>驾驶席座椅迎宾功能</td>
+								<td>-</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>后排座椅加热</td>
+								<td>-</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>后排座椅通风按摩（10点气动）</td>
+								<td>-</td>
+								<td>-</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>后排VIP控制功能</td>
+								<td>座椅</td>
+								<td>空调、座椅</td>
+								<td>空调、座椅</td>
+							</tr>
+							<tr>
+								<td>后排座椅老板键</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>靠背倾斜可分别电动调节（4：2：4）</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>后排高度可调航空睡眠头枕</td>
+								<td>2个</td>
+								<td>2个</td>
+								<td>2个</td>
+							</tr>
+							<tr>
+								<td>车载冰箱接口</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>12伏接口</td>
+								<td>3</td>
+								<td>3</td>
+								<td>3</td>
+							</tr>
+							<tr>
+								<td>220V电源 </td>
+								<td>-</td>
+								<td>-</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>自动空调</td>
+								<td>双区</td>
+								<td>四区<br>（带AQS空气质量监测模块）</td>
+								<td>四区<br>（带AQS空气质量监测模块）</td>
+							</tr>
+							<tr>
+								<td>花粉及活性碳过滤器</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>负离子发生器</td>
+								<td>-</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td colspan="4">安全防护</td>
+							</tr>
+							<tr>
+								<td>发动机芯片防盗</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>胎压监测</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>盲点监测</td>
+								<td>-</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>前部气囊</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>前部侧气囊</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>前后侧气帘</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>前后排带预张紧和限力器的安全带</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>前排安全带未系提醒</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>后排座位带2个ISOFIX接口</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>无钥匙进入</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>无钥匙启动</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td colspan="4">科技驾控</td>
+							</tr>
+							<tr>
+								<td>多功能真皮方向盘</td>
+								<td>Claudia真皮</td>
+								<td>Nappa真皮</td>
+								<td>Nappa真皮</td>
+							</tr>
+							<tr>
+								<td>方向盘四向调节</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>Stop-Start STT发动机智能启停系统</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>ESP车身稳定控制系统</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>ABS防抱死系统</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>ASR牵引力控制系统</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>EBD制动力分配</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>EPB电子手刹</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>坡路辅助</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>定速巡航</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>行驶自动落锁</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>儿童安全门锁</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>彩色HUD平视显示系统</td>
+								<td>-</td>
+								<td>-</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>倒车影像</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>360环车影像系统</td>
+								<td>-</td>
+								<td>-</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>前驻车雷达</td>
+								<td>-</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>后驻车雷达</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td colspan="4">影音导航</td>
+							</tr>
+							<tr>
+								<td>7"彩色触摸显示屏</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>GPS+北斗导航</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>WindLink车载智能互联系统</td>
+								<td>O</td>
+								<td>O</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>哈曼 Infinity®Hifi高保真音响</td>
+								<td>-</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>扬声器</td>
+								<td> 8 扬声器</td>
+								<td> 12 扬声器</td>
+								<td> 12 扬声器</td>
+							</tr>
+							<tr>
+								<td>DVD播放器</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>蓝牙系统</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td colspan="4">精美装饰</td>
+							</tr>
+							<tr>
+								<td>仪表板豪华木纹装饰</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>方向盘豪华木纹装饰</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>中控台石英钟</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>出风口镀铬装饰条</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>四门镀铬装饰条</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>中控台"AEOLUS"铭牌</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>侧围豪华镀铬装饰条</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>内饰颜色</td>
+								<td>深色</td>
+								<td>深色/浅色</td>
+								<td>深色</td>
+							</tr>
+							<tr>
+								<td>车身颜色</td>
+								<td colspan="3">碳晶黑/珠光白/钨金灰</td>
+							</tr>
+						</table>
+						<p class="zhu">备注：<br>●表示有此装备；-表示无此装备；O表示选装<br>豪华型、尊贵型选装Windlink另加5000元</p>
+					</div>
+
+				</div>
+				<img src="imgas/11.png" alt="" id="cuo3" />
+			</div>
+
+			<!--预约试驾部分结束-->
+			<!-- 大页面的透明度滚轮开始 -->
+			<div id="ca">
+				<ul id="banner">
+					<li id="tu1" style="opacity:1;">
+						<img src="imgas/img/2_3.jpg" alt="" id="timesImg" class="change" />
+						<img src="imgas/img/1_2.png" alt="" id="logo2" />
+					</li>
+					<li id="tu2">
+						<div id="box1">
+							<!--<img src="imgas/img/1.jpg" alt="" class="change"/>-->
+						</div>
+
+						<div>
+							<img src="imgas/img/3.png" alt="" class="tu2_img1">
+							<img src="imgas/img/999.png" alt="" class="tu2_img1">
+						</div>
+						<div class="imgs_main"></div>
+						<div class="imgs_main">
+							<div id="don_1">
+								<img src="imgas/imgs/1.jpg" alt="" class="change" />
+								<img src="imgas/imgs/2.jpg" alt="" class="change" />
+								<img src="imgas/imgs/3.jpg" alt="" class="change" />
+								<img src="imgas/imgs/4.jpg" alt="" class="change" />
+								<img src="imgas/imgs/5.jpg" alt="" class="change" />
+								<img src="imgas/imgs/6.jpg" alt="" class="change" />
+								<img src="imgas/imgs/7.jpg" alt="" class="change" />
+								<img src="imgas/imgs/8.jpg" alt="" class="change" />
+								<img src="imgas/imgs/9.jpg" alt="" class="change" />
+								<img src="imgas/imgs/10.jpg" alt="" class="change" />
+								<img src="imgas/imgs/11.jpg" alt="" class="change" />
+								<img src="imgas/imgs/12.jpg" alt="" class="change" />
+								<img src="imgas/imgs/13.jpg" alt="" class="change" />
+								<img src="imgas/imgs/13.jpg" alt="" class="change" />
+
+							</div>
+							<div id="tu2_1">
+								<img src="imgas/tu2_1/15.jpg" alt="" class="change" />
+								<img src="imgas/tu2_1/16.jpg" alt="" class="change" />
+								<img src="imgas/tu2_1/17.jpg" alt="" class="change" />
+								<img src="imgas/tu2_1/18.jpg" alt="" class="change" />
+								<img src="imgas/tu2_1/19.jpg" alt="" class="change" />
+								<img src="imgas/tu2_1/20.jpg" alt="" class="change" />
+								<img src="imgas/tu2_1/21.jpg" alt="" class="change" />
+								<img src="imgas/tu2_1/22.jpg" alt="" class="change" />
+								<img src="imgas/tu2_1/23.jpg" alt="" class="change" />
+								<img src="imgas/tu2_1/24.jpg" alt="" class="change" />
+								<img src="imgas/tu2_1/25.jpg" alt="" class="change" />
+								<img src="imgas/tu2_1/26.jpg" alt="" class="change" />
+								<img src="imgas/tu2_1/27.jpg" alt="" class="change" />
+								<img src="imgas/tu2_1/28.jpg" alt="" class="change" />
+
+							</div>
+							<div id="tu2_2">
+								<img src="imgas/tu2_2/29.jpg" class="change" />
+								<img src="imgas/tu2_2/30.jpg" class="change" />
+								<img src="imgas/tu2_2/31.jpg" class="change" />
+								<img src="imgas/tu2_2/32.jpg" class="change" />
+								<img src="imgas/tu2_2/33.jpg" class="change" />
+							</div>
+							<div id="tu2_3">
+								<img src="imgas/tu2_3/34.jpg" class="change" />
+								<img src="imgas/tu2_3/35.jpg" class="change" />
+								<img src="imgas/tu2_3/36.jpg" class="change" />
+								<img src="imgas/tu2_3/37.jpg" class="change" />
+								<img src="imgas/tu2_3/38.jpg" class="change" />
+								<img src="imgas/tu2_3/39.jpg" class="change" />
+								<img src="imgas/tu2_3/40.jpg" class="change" />
+								<img src="imgas/tu2_3/41.jpg" class="change" />
+								<img src="imgas/tu2_3/42.jpg" class="change" />
+								<img src="imgas/tu2_3/43.jpg" class="change" />
+								<img src="imgas/tu2_3/44.jpg" class="change" />
+								<img src="imgas/tu2_3/45.jpg" class="change" />
+								<img src="imgas/tu2_3/46.jpg" class="change" />
+							</div>
+						</div>
+					</li>
+					<li id="tu3">
+						<!--<img src="imgas/img/1(2).jpg" alt="" class="change"/>-->
+						<div>
+							<img src="imgas/img/18.png" alt="" class="tu3_img1" />
+							<img src="imgas/img/zhan.png" alt="" class="tu3_img2" />
+							<img src="imgas/img/xin.png" alt="" class="tu3_img3" />
+						</div>
+						<div class="imgs_main">
+							<div id="don_2">
+								<img src="imgas/images//1.jpg" class="change" />
+								<img src="imgas/images//2.jpg" alt="" class="change" />
+								<img src="imgas/images//3.jpg" alt="" class="change" />
+								<img src="imgas/images//4.jpg" alt="" class="change" />
+								<img src="imgas/images//5.jpg" alt="" class="change" />
+								<img src="imgas/images//6.jpg" alt="" class="change" />
+								<img src="imgas/images//7.jpg" alt="" class="change" />
+								<img src="imgas/images//8.jpg" alt="" class="change" />
+								<img src="imgas/images//9.jpg" alt="" class="change" />
+								<img src="imgas/images//10.jpg" alt="" class="change" />
+								<img src="imgas/images//11.jpg" alt="" class="change" />
+								<img src="imgas/images//12.jpg" alt="" class="change" />
+								<img src="imgas/images//13.jpg" alt="" class="change" />
+							</div>
+							<div id="tu3_1">
+								<img src="imgas/tu3_1/14.jpg" alt="" class="change" />
+								<img src="imgas/tu3_1/15.jpg" alt="" class="change" />
+								<img src="imgas/tu3_1/16.jpg" alt="" class="change" />
+								<img src="imgas/tu3_1/17.jpg" alt="" class="change" />
+								<img src="imgas/tu3_1/18.jpg" alt="" class="change" />
+								<img src="imgas/tu3_1/19.jpg" alt="" class="change" />
+								<img src="imgas/tu3_1/20.jpg" alt="" class="change" />
+								<img src="imgas/tu3_1/21.jpg" alt="" class="change" />
+								<img src="imgas/tu3_1/22.jpg" alt="" class="change" />
+								<img src="imgas/tu3_1/23.jpg" alt="" class="change" />
+
+							</div>
+							<div id="tu3_2">
+								<img src="imgas/tu3_2/24.jpg" alt="" class="change" />
+								<img src="imgas/tu3_2/25.jpg" alt="" class="change" />
+								<img src="imgas/tu3_2/26.jpg" alt="" class="change" />
+								<img src="imgas/tu3_2/27.jpg" alt="" class="change" />
+								<img src="imgas/tu3_2/28.jpg" alt="" class="change" />
+								<img src="imgas/tu3_2/29.jpg" alt="" class="change" />
+								<img src="imgas/tu3_2/30.jpg" alt="" class="change" />
+								<img src="imgas/tu3_2/31.jpg" alt="" class="change" />
+								<img src="imgas/tu3_2/32.jpg" alt="" class="change" />
+								<img src="imgas/tu3_2/33.jpg" alt="" class="change" />
+								<img src="imgas/tu3_2/34.jpg" alt="" class="change" />
+								<img src="imgas/tu3_2/35.jpg" alt="" class="change" />
+								<img src="imgas/tu3_2/36.jpg" alt="" class="change" />
+								<img src="imgas/tu3_2/37.jpg" alt="" class="change" />
+								<img src="imgas/tu3_2/38.jpg" alt="" class="change" />
+								<img src="imgas/tu3_2/39.jpg" alt="" class="change" />
+								<img src="imgas/tu3_2/40.jpg" alt="" class="change" />
+								<img src="imgas/tu3_2/41.jpg" alt="" class="change" />
+								<img src="imgas/tu3_2/42.jpg" alt="" class="change" />
+								<img src="imgas/tu3_2/43.jpg" alt="" class="change" />
+								<img src="imgas/tu3_2/44.jpg" alt="" class="change" />
+								<img src="imgas/tu3_2/45.jpg" alt="" class="change" />
+							</div>
+							<div id="tu3_3">
+								<img src="imgas/tu3_3/46.jpg" class="change" />
+								<img src="imgas/tu3_3/47.jpg" class="change" />
+								<img src="imgas/tu3_3/48.jpg" class="change" />
+								<img src="imgas/tu3_3/49.jpg" class="change" />
+								<img src="imgas/tu3_3/50.jpg" class="change" />
+								<img src="imgas/tu3_3/51.jpg" class="change" />
+								<img src="imgas/tu3_3/52.jpg" class="change" />
+								<img src="imgas/tu3_3/53.jpg" class="change" />
+								<img src="imgas/tu3_3/54.jpg" class="change" />
+								<img src="imgas/tu3_3/55.jpg" class="change" />
+								<img src="imgas/tu3_3/56.jpg" class="change" />
+								<img src="imgas/tu3_3/57.jpg" class="change" />
+							</div>
+						</div> /
+					</li>
+					<li id="tu4">
+						<!--<img src="imgas/img/12(2).jpg" alt="" class="change"/>-->
+						<div>
+							<img src="imgas/img/zhanz.png" alt="" class="tu4_img1" />
+							<img src="imgas/img/xinz.png" alt="" class="tu4_img2" />
+						</div>
+						<div class="imgs_main">
+							<div id="don_3">
+								<img src="imgas/tu4/1.jpg" alt="" class="change" />
+								<img src="imgas/tu4/2.jpg" alt="" class="change" />
+								<img src="imgas/tu4/3.jpg" alt="" class="change" />
+								<img src="imgas/tu4/5.jpg" alt="" class="change" />
+								<img src="imgas/tu4/6.jpg" alt="" class="change" />
+								<img src="imgas/tu4/7.jpg" alt="" class="change" />
+								<img src="imgas/tu4/8.jpg" alt="" class="change" />
+								<img src="imgas/tu4/9.jpg" alt="" class="change" />
+								<img src="imgas/tu4/11.jpg" alt="" class="change" />
+								<img src="imgas/tu4/13.jpg" alt="" class="change" />
+								<img src="imgas/tu4/15.jpg" alt="" class="change" />
+
+							</div>
+							<div id="tu4_1">
+								<img src="imgas/tu4_1/16.jpg" alt="" class="change" />
+								<img src="imgas/tu4_1/17.jpg" alt="" class="change" />
+								<img src="imgas/tu4_1/18.jpg" alt="" class="change" />
+								<img src="imgas/tu4_1/19.jpg" alt="" class="change" />
+								<img src="imgas/tu4_1/20.jpg" alt="" class="change" />
+								<img src="imgas/tu4_1/21.jpg" alt="" class="change" />
+								<img src="imgas/tu4_1/22.jpg" alt="" class="change" />
+								<img src="imgas/tu4_1/23.jpg" alt="" class="change" />
+
+							</div>
+							<div id="tu4_2">
+								<img src="imgas/tu4_2/24.jpg" alt="" class="change" />
+								<img src="imgas/tu4_2/25.jpg" alt="" class="change" />
+								<img src="imgas/tu4_2/26.jpg" alt="" class="change" />
+								<img src="imgas/tu4_2/27.jpg" alt="" class="change" />
+								<img src="imgas/tu4_2/28.jpg" alt="" class="change" />
+								<img src="imgas/tu4_2/29.jpg" alt="" class="change" />
+								<img src="imgas/tu4_2/30.jpg" alt="" class="change" />
+								<img src="imgas/tu4_2/31.jpg" alt="" class="change" />
+								<img src="imgas/tu4_2/32.jpg" alt="" class="change" />
+								<img src="imgas/tu4_2/33.jpg" alt="" class="change" />
+								<img src="imgas/tu4_2/34.jpg" alt="" class="change" />
+								<img src="imgas/tu4_2/35.jpg" alt="" class="change" />
+								<img src="imgas/tu4_2/36.jpg" alt="" class="change" />
+								<img src="imgas/tu4_2/37.jpg" alt="" class="change" />
+								<img src="imgas/tu4_2/38.jpg" alt="" class="change" />
+								<img src="imgas/tu4_2/39.jpg" alt="" class="change" />
+								<img src="imgas/tu4_2/40.jpg" alt="" class="change" />
+								<img src="imgas/tu4_2/41.jpg" alt="" class="change" />
+
+							</div>
+							<div id="tu4_3">
+								<img src="imgas/tu4_3/52.jpg" alt="" class="change" />
+								<img src="imgas/tu4_3/53.jpg" alt="" class="change" />
+								<img src="imgas/tu4_3/54.jpg" alt="" class="change" />
+								<img src="imgas/tu4_3/55.jpg" alt="" class="change" />
+								<img src="imgas/tu4_3/56.jpg" alt="" class="change" />
+								<img src="imgas/tu4_3/57.jpg" alt="" class="change" />
+								<img src="imgas/tu4_3/58.jpg" alt="" class="change" />
+								<img src="imgas/tu4_3/59.jpg" alt="" class="change" />
+								<img src="imgas/tu4_3/60.jpg" alt="" class="change" />
+								<img src="imgas/tu4_3/61.jpg" alt="" class="change" />
+								<img src="imgas/tu4_3/62.jpg" alt="" class="change" />
+								<img src="imgas/tu4_3/63.jpg" alt="" class="change" />
+								<img src="imgas/tu4_3/64.jpg" alt="" class="change" />
+								<img src="imgas/tu4_3/65.jpg" alt="" class="change" />
+							</div>
+						</div>
+						<div class="imgs_main"></div>
+					</li>
+					<li id="tu5">
+						<div>
+							<img src="imgas/img/yyy.png" class="tu5_img1" />
+						</div>
+						<div id="don_4">
+							<img src="imgas/tu5/1.jpg" alt="" class="change" />
+							<img src="imgas/tu5/2.jpg" alt="" class="change" />
+							<img src="imgas/tu5/3.jpg" alt="" class="change" />
+							<img src="imgas/tu5/4.jpg" alt="" class="change" />
+							<img src="imgas/tu5/5.jpg" alt="" class="change" />
+							<img src="imgas/tu5/6.jpg" alt="" class="change" />
+							<img src="imgas/tu5/7.jpg" alt="" class="change" />
+							<img src="imgas/tu5/9.jpg" alt="" class="change" />
+							<img src="imgas/tu5/10.jpg" alt="" class="change" />
+							<img src="imgas/tu5/11.jpg" alt="" class="change" />
+							<img src="imgas/tu5/12.jpg" alt="" class="change" />
+							<img src="imgas/tu5/13.jpg" alt="" class="change" />
+							<img src="imgas/tu5/14.jpg" alt="" class="change" />
+							<img src="imgas/tu5/15.jpg" alt="" class="change" />
+						</div>
+						<!--车的tab切换-->
+						<div id="taber">
+							<div id="tu5_X">
+								<img src="imgas/16.png" class="zi" />
+								<span class="black">
+			<img src="imgas/17.png" alt="" />
+			<img src="imgas/19.png"/>
+			<img src="imgas/18.png" alt="" />
+		</span>
+								<span class="white">
+			<img src="imgas/18 (1).png" alt="" />
+			<img src="imgas/20.png" alt="" />
+			<img src="imgas/17 (1).png" alt="" />
+			
+		</span>
+								<span>
+			<img src="imgas/18 (2).png" alt="" />
+			
+			<img src="imgas/21.png" alt="" />
+			<img src="imgas/17 (2).png" alt="" />
+			
+		</span>
+							</div>
+							<div id="taberr">
+								<div id="tu5_black">
+									<img src="imgas/tu5_black1/17.jpg" alt="" class="change" />
+									<img src="imgas/tu5_black1/18.jpg" alt="" class="change" />
+									<img src="imgas/tu5_black1/19.jpg" alt="" class="change" />
+									<img src="imgas/tu5_black1/20.jpg" alt="" class="change" />
+									<img src="imgas/tu5_black1/21.jpg" alt="" class="change" />
+									<img src="imgas/tu5_black1/22.jpg" alt="" class="change" />
+									<img src="imgas/tu5_black1/23.jpg" alt="" class="change" />
+									<img src="imgas/tu5_black1/24.jpg" alt="" class="change" />
+									<img src="imgas/tu5_black1/25.jpg" alt="" class="change" />
+									<img src="imgas/tu5_black1/26.jpg" alt="" class="change" />
+									<img src="imgas/tu5_black1/27.jpg" alt="" class="change" />
+									<img src="imgas/tu5_black1/28.jpg" alt="" class="change" />
+									<img src="imgas/tu5_black1/29.jpg" alt="" class="change" />
+									<img src="imgas/tu5_black1/30.jpg" alt="" class="change" />
+									<img src="imgas/tu5_black1/31.jpg" alt="" class="change" />
+									<img src="imgas/tu5_black1/32.jpg" alt="" class="change" />
+									<img src="imgas/tu5_black1/33.jpg" alt="" class="change" />
+									<img src="imgas/tu5_black1/34.jpg" alt="" class="change" />
+									<img src="imgas/tu5_black1/35.jpg" alt="" class="change" />
+									<img src="imgas/tu5_black1/36.jpg" alt="" class="change" />
+									<img src="imgas/tu5_black1/37.jpg" alt="" class="change" />
+									<img src="imgas/tu5_black1/38.jpg" alt="" class="change" />
+									<img src="imgas/tu5_black1/39.jpg" alt="" class="change" />
+									<img src="imgas/tu5_black1/40.jpg" alt="" class="change" />
+									<img src="imgas/tu5_black1/41.jpg" alt="" class="change" />
+									<img src="imgas/tu5_black1/42.jpg" alt="" class="change" />
+									<img src="imgas/tu5_black1/43.jpg" alt="" class="change" />
+									<img src="imgas/tu5_black1/44.jpg" alt="" class="change" />
+									<img src="imgas/tu5_black1/45.jpg" alt="" class="change" />
+									<img src="imgas/tu5_black1/46.jpg" alt="" class="change" />
+									<img src="imgas/tu5_black1/47.jpg" alt="" class="change" />
+									<img src="imgas/tu5_black1/48.jpg" alt="" class="change" />
+
+								</div>
+								<div id="tu5_white">
+									<img src="imgas/tu5_white1/17.jpg" alt="" class="change" />
+									<img src="imgas/tu5_white1/18.jpg" alt="" class="change" />
+									<img src="imgas/tu5_white1/19.jpg" alt="" class="change" />
+									<img src="imgas/tu5_white1/20.jpg" alt="" class="change" />
+									<img src="imgas/tu5_white1/21.jpg" alt="" class="change" />
+									<img src="imgas/tu5_white1/22.jpg" alt="" class="change" />
+									<img src="imgas/tu5_white1/23.jpg" alt="" class="change" />
+									<img src="imgas/tu5_white1/24.jpg" alt="" class="change" />
+									<img src="imgas/tu5_white1/25.jpg" alt="" class="change" />
+									<img src="imgas/tu5_white1/26.jpg" alt="" class="change" />
+									<img src="imgas/tu5_white1/27.jpg" alt="" class="change" />
+									<img src="imgas/tu5_white1/28.jpg" alt="" class="change" />
+									<img src="imgas/tu5_white1/29.jpg" alt="" class="change" />
+									<img src="imgas/tu5_white1/30.jpg" alt="" class="change" />
+									<img src="imgas/tu5_white1/31.jpg" alt="" class="change" />
+									<img src="imgas/tu5_white1/32.jpg" alt="" class="change" />
+									<img src="imgas/tu5_white1/33.jpg" alt="" class="change" />
+									<img src="imgas/tu5_white1/34.jpg" alt="" class="change" />
+									<img src="imgas/tu5_white1/35.jpg" alt="" class="change" />
+									<img src="imgas/tu5_white1/36.jpg" alt="" class="change" />
+									<img src="imgas/tu5_white1/37.jpg" alt="" class="change" />
+									<img src="imgas/tu5_white1/38.jpg" alt="" class="change" />
+									<img src="imgas/tu5_white1/39.jpg" alt="" class="change" />
+									<img src="imgas/tu5_white1/40.jpg" alt="" class="change" />
+									<img src="imgas/tu5_white1/41.jpg" alt="" class="change" />
+									<img src="imgas/tu5_white1/42.jpg" alt="" class="change" />
+									<img src="imgas/tu5_white1/43.jpg" alt="" class="change" />
+									<img src="imgas/tu5_white1/44.jpg" alt="" class="change" />
+									<img src="imgas/tu5_white1/45.jpg" alt="" class="change" />
+									<img src="imgas/tu5_white1/46.jpg" alt="" class="change" />
+									<img src="imgas/tu5_white1/47.jpg" alt="" class="change" />
+									<img src="imgas/tu5_white1/48.jpg" alt="" class="change" />
+
+								</div>
+								<div id="tu5_gray">
+									<img src="imgas/tu5_gray1/17.jpg" alt="" class="change" />
+									<img src="imgas/tu5_gray1/18.jpg" alt="" class="change" />
+									<img src="imgas/tu5_gray1/19.jpg" alt="" class="change" />
+									<img src="imgas/tu5_gray1/20.jpg" alt="" class="change" />
+									<img src="imgas/tu5_gray1/21.jpg" alt="" class="change" />
+									<img src="imgas/tu5_gray1/22.jpg" alt="" class="change" />
+									<img src="imgas/tu5_gray1/23.jpg" alt="" class="change" />
+									<img src="imgas/tu5_gray1/24.jpg" alt="" class="change" />
+									<img src="imgas/tu5_gray1/25.jpg" alt="" class="change" />
+									<img src="imgas/tu5_gray1/26.jpg" alt="" class="change" />
+									<img src="imgas/tu5_gray1/27.jpg" alt="" class="change" />
+									<img src="imgas/tu5_gray1/28.jpg" alt="" class="change" />
+									<img src="imgas/tu5_gray1/29.jpg" alt="" class="change" />
+									<img src="imgas/tu5_gray1/30.jpg" alt="" class="change" />
+									<img src="imgas/tu5_gray1/31.jpg" alt="" class="change" />
+									<img src="imgas/tu5_gray1/32.jpg" alt="" class="change" />
+									<img src="imgas/tu5_gray1/33.jpg" alt="" class="change" />
+									<img src="imgas/tu5_gray1/34.jpg" alt="" class="change" />
+									<img src="imgas/tu5_gray1/35.jpg" alt="" class="change" />
+									<img src="imgas/tu5_gray1/36.jpg" alt="" class="change" />
+									<img src="imgas/tu5_gray1/37.jpg" alt="" class="change" />
+									<img src="imgas/tu5_gray1/38.jpg" alt="" class="change" />
+									<img src="imgas/tu5_gray1/39.jpg" alt="" class="change" />
+									<img src="imgas/tu5_gray1/40.jpg" alt="" class="change" />
+									<img src="imgas/tu5_gray1/41.jpg" alt="" class="change" />
+									<img src="imgas/tu5_gray1/42.jpg" alt="" class="change" />
+									<img src="imgas/tu5_gray1/43.jpg" alt="" class="change" />
+									<img src="imgas/tu5_gray1/44.jpg" alt="" class="change" />
+									<img src="imgas/tu5_gray1/45.jpg" alt="" class="change" />
+									<img src="imgas/tu5_gray1/46.jpg" alt="" class="change" />
+									<img src="imgas/tu5_gray1/47.jpg" alt="" class="change" />
+									<img src="imgas/tu5_gray1/48.jpg" alt="" class="change" />
+
+								</div>
+							</div>
+						</div>
+						<div class="dongtu">
+							<img src="imgas/22.gif" alt="" class="gif" />
+						</div>
+
+					</li>
+
+				</ul>
+		</main>
+		<script src="js/index.js"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?key=DTRyKneihdzzXM02Mtj3aqzZUiGjxYHq&v=1.1&services=true"></script>
+		<script type="text/javascript" src="js/map.js"></script>
+
+	</body>
+
+</html>

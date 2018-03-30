@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{background: red;}
+			#time{position: absolute;top: 30px;right: 50px;}
+			#time span{background-repeat: no-repeat;background-image:url(imgas/times.png);width:13px; height:19px;display: inline-block;}
+			#time .spanx{background-position: -34px 2px;width: 10px;}
+			#time .span0 {background-position: -2px -2px;}
+			#time .span1{background-position: -47px -2px;}
+			#time .span2{background-position: -2px -22px;}
+			#time .span3{background-position: -17px -22px;}
+			#time .span4{background-position: -32px -22px;}
+			#time .span5{background-position: -47px -22px;}
+			#time .span6{background-position: -2px -42px;}
+			#time .span7{background-position: -17px -42px;}
+			#time .span8{background-position: -32px -42px;}
+			#time .span9{background-position: -17px -2px;}
+		</style>
+	</head>
+	<body>
+		<div id="time">
+			<span class="span0 time"></span>
+			<span class="span2 time"></span>
+			<span class="spanx"></span>
+			<span class="span1 time"></span>
+			<span class="span2 time"></span>
+			<span class="spanx"></span>
+			<span class="span5 time"></span>
+			<span class="span9 time"></span>
+		</div>
+		<script type="text/javascript">
+			var TimeMate = document.getElementsByClassName('time')
+			function ChangeTime(){
+				var Nowtime = new Date();
+				var h = Nowtime.getHours();
+				if (h<10) h='0'+h;
+				var  m = Nowtime.getMinutes();
+				if (m<10) m='0'+m;
+				var s = Nowtime.getSeconds();
+				if (s<10) s='0'+s;
+				var str = ''+h+''+m+''+s;
+				for (var i=0;i<str.length;i++) {
+					TimeMate[i].className = 'time span'+str[i]
+				}
+			}
+			setInterval(ChangeTime,1000)
+		</script>
+	</body>
+</html>
